@@ -16,7 +16,7 @@ This is different from predicting **categorical** or **qualitative** data (data 
 A **clustering problem** involves figuring out which data points are similar to each other, without making a prediction.
 
 
-## Model Types
+#### Model Types
 
 **Linear regression** for predicting quantitative values.
 

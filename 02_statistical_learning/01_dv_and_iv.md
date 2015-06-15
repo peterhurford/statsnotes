@@ -14,7 +14,7 @@
 
 ## Relating DV and IVs
 
-* We assume there is a relationship between Y and X such that `Y = *f*(X) + *e*`.
+* We assume there is a relationship between Y and X such that Y = *f*(X) + *e*.
 
 * *f* is an unknown function that maps X to Y.  *e* is a random error term, independent of X with a mean of 0.
 

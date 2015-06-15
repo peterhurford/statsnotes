@@ -7,7 +7,7 @@
 
 * Predict Y from X.
 
-* `Y^ = *f^*(X)`, where *f^* represents our estimate of *f* and Y^ represents our prediction of Y.
+* Y^ = *f^*(X), where *f^* represents our estimate of *f* and Y^ represents our prediction of Y.
 
 
 #### Prediction Accuracy
@@ -25,7 +25,7 @@
 
 #### Notation for Error
 
-* Error can be defined as `E(Y - Y^)^2 = E(*f*(X) + *e* - f^(X))^2 = (*f*(X) - *f^*(X))^2 + Var(*e*)`.
+* Error can be defined as E(Y - Y^)^2 = E(*f*(X) + *e* - f^(X))^2 = (*f*(X) - *f^*(X))^2 + Var(*e*).
 
 * E is error. Var is the variance function.
 
