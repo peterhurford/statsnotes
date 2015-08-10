@@ -33,7 +33,7 @@
 
 * An example of a non-parametric approach is a **thin-plate spline**, which fits a *n*-dimensional **hyperplane** to the data points with an arbitrary **smoothness**.
 
-![](thin-plate-spline.png)
+![](../images/thin-plate-spline.png)
 
 
 ## The Tradeoff Between Prediction Accuracy and Model Interpretability

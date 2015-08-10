@@ -6,5 +6,5 @@
 
 * One of these approaches is **clustering**, or identifying groups from data.
 
-![](clustering.png)
+![](../images/clustering.png)
 
