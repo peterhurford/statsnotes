@@ -43,3 +43,12 @@
 * Flexibility comes with a great benefit -- higher prediction accuracy.  However, it also comes with a great cost -- more flexible models are harder to interpret.
 
 * It's very easy to take a linear model and understand the relationship between the variables.  It is much harder to do so with a thin-plate spline.
+
+
+## Why so many methods?
+
+* Why are there so many methods for estimating *f*?  Why not one best method?
+
+* The tradeoff between prediction accuracy and model interpretability would suggest we'd want a range of methods, so we can pick our favorite position on the tradeoff.
+
+* However, it's also true that there is no one best method that dominates all others across all possible data sets.  This is called **the "There is no free lunch in statistics" principle**.
