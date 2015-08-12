@@ -4,7 +4,7 @@
 
 #### Mean Squared Error
 
-* For regressions, a common used measure is **mean squared error** (MSE), or the sum of the squares of the differences between the actual value and the predicted value, or (1/*n*) * (Σ{i=1 -> *n*}((*y*[*i*] - *f^*(*x*[*i*]))^2)).
+* For regressions, a common used measure is **mean squared error** (MSE), or the sum of the squares of the differences between the actual value and the predicted value, or (1/*n*) * (Σ{*i*=1 -> *n*}((*y*[*i*] - *f^*(*x*[*i*]))^2)).
 
 * MSE is small if the predicted responses are very close to the true responses and large if, for at least some of the observations, the predicted and true responses differ substantially.
 
