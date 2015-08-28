@@ -38,9 +38,9 @@ A prerequisite for this is understanding **Bayes Theroem**, which is not explain
 
 ![](../images/bayes-decision-boundary.png)
 
-* The Bayes classifier produces the lowest possible error rate, called the **Bayes error rate**.  Since the Bayes classifier always chooses the class for which P(*Y* = j | *X* = *x*[0]) is the largest, the error rate at *X* = *x*[0] will be 1 - max[j](P(*Y* = j | *X* = *x*[0])).
+* The Bayes classifier produces the lowest possible error rate, called the **Bayes error rate**.  Since the Bayes classifier always chooses the class for which P(*Y* = j | *X* = *x*[0]) is the largest, the error rate at *X* = *x*[0] will be 1 - max{j}(P(*Y* = j | *X* = *x*[0])).
 
-* This means the overall Bayes errror rate will be 1 - max[j](P(*Y* = j | *X*)), where *X* is the set of all possible *x* (*x*[0] .. *x*[*n*]).
+* This means the overall Bayes errror rate will be 1 - max{j}(P(*Y* = j | *X*)), where *X* is the set of all possible *x* (*x*[0] .. *x*[*n*]).
 
 
 #### Understanding by Example
@@ -61,14 +61,14 @@ So P(Y = 1 | *X* = *x*[0]) represents the probability the politician is Republic
 
 Since 8/10 politicians who's stances on cutting taxes is favorable are Republicans, P(Y = 1 | *X* = *x*[0]) = 8/10 = 0.8.
 
-But what does 1 - max[j](P(*Y* = j | *X*)) mean?
+But what does 1 - max{j}(P(*Y* = j | *X*)) mean?
 
-max[j](P(*Y* = j | *X*)), mathematically, means we're looking for the value of j such that P(*Y* = j | *X*) is the largest.
+max{j}(P(*Y* = j | *X*)), mathematically, means we're looking for the value of j such that P(*Y* = j | *X*) is the largest.
 
 Let's say we have three possible stances on cutting taxes -- they're either in favor, neutral, or against.  Also, let's say 8/10 politicians in favor of cutting taxes are Republicans, 4/10 politicians neutral on cutting taxes are Republicans, and 1/10 politicians against cutting taxes are Republicans.  Here, there are two possible values of j -- j = 1, which means Republican, and j = 0, which means Democrat.  We also have one piece of evidence to consider -- that the politician is in favor of cutting taxes.
 
 Thus given our evidence *X* (the politician is in favor of cutting taxes), the j which maximizes P(*Y* = j | *X*) is j = 1 (Republican), because Republicans are more likely than Democrats (8/10 vs. 2/10) to be in favor of cutting taxes in our data.
 
-max[j](P(*Y* = j | *X*)) is the value at the maximum j.  Since the maximum j is 1, max[j](P(*Y* = j | *X*)) = P(*Y* = 1 | *X*) = 0.8.
+max{j}(P(*Y* = j | *X*)) is the value at the maximum j.  Since the maximum j is 1, max{j}(P(*Y* = j | *X*)) = P(*Y* = 1 | *X*) = 0.8.
 
-The Bayes error rate is 1 - max[j](P(*Y* = j | *X*)) = 1 - 0.8 = 0.2.
+The Bayes error rate is 1 - max{j}(P(*Y* = j | *X*)) = 1 - 0.8 = 0.2.
