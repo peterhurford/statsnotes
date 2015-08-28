@@ -18,9 +18,15 @@
 
 **(c) We are interesting in predicting the % change in the US dollar in relation to the weekly changes in the world stock markets. Hence we collect weekly data for all of 2012. For each week we record the % change in the dollar, the % change in the US market, the % change in the British market, and the % change in the German market.**  This is a regression problem because % change in the US dollar is a quantitative dependent variable.  This is also ap rediction problem because "we are interested in predicting the % change".  n = 52 (weekly data over 2012) and p = 3 (% change in US, % change in British, % change in German).
 
+-
+
 ** 5. What are the advantages and disadvantages of a very flexible (versus a less flexible) approach for regression or classification? Under what circumstances might a more flexible approach be preferred to a less flexible approach? When might a less flexible approach be preferred?**
 
+-
+
 **6. Describe the differences between a parametric and a non-parametric statistical learning approach. What are the advantages of a parametric approach to regression or classification (as opposed to a non- parametric approach)? What are its disadvantages?**
+
+-
 
 **7. The table below provides a training data set containing six observa- tions, three predictors, and one qualitative response variable.**
 Obs. X1 X2 X3 Y
