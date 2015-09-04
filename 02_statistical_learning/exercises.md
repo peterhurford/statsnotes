@@ -36,7 +36,7 @@ A non-parametric approach is better at fitting highly nonlinear patterns, becaus
 
 | Obs | X1 | X2 | X3 | Y |
 | --- | -- | -- | -- | - |
-| 1   | 0  | 3  | 0  | Red |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell |
 | 1   | 0  | 3  | 0  | Red |
 
 | Obs | X1 | X2 | X3 | Y     |
