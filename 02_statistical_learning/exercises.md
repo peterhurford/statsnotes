@@ -41,12 +41,12 @@ A non-parametric approach is better at fitting highly nonlinear patterns, becaus
 
 | Obs | X1 | X2 | X3 | Y |
 |---|---|---|---|---|
-| 1 | 0 | 3 | 0 | R |
+| 1 | 0 | 3 | 0 | Red |
 |   |   |   |   |   |
 |   |   |   |   |   |
 
 | Obs | X1 | X2 | X3 | Y     |
-| --- | -- | -- | -- | ----- |
+|-----|----|----|----|-------|
 | 1   | 0  | 3  | 0  | Red   |
 | 2   | 2  | 0  | 0  | Red   |
 | 3   | 0  | 1  | 3  | Red   |
