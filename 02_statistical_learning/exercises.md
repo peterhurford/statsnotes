@@ -48,10 +48,15 @@ Obs | X1 | X2 | X3 | Y
 **(a) Compute the Euclidean distance between each observation and the test point, X1 = X2 = X3 = 0.**
 
 Obs 1 has Euclidean Distance sqrt[(0 - 0)^2 + (3 - 0)^2 + (0 - 0)^2] = 3.
+
 Obs 2 has Euclidean Distance sqrt[(2 - 0)^2 + (0 - 0)^2 + (0 - 0)^2] = 2.
+
 Obs 3 has Euclidean Distance sqrt[(0 - 0)^2 + (1 - 0)^2 + (3 - 0)^2] = sqrt[0 + 1 + 9] = sqrt[10] = ~3.16.
+
 Obs 4 has Euclidean Distance sqrt[(0 - 0)^2 + (1 - 0)^2 + (2 - 0)^2] = sqrt[1 + 4] = sqrt[5] = ~2.24.
+
 Obs 5 has Euclidean Distance sqrt[(-1 - 0)^2 + (0 - 0)^2 + (1 - 0)^2] = sqrt[1 + 1] = sqrt[2] = ~1.41.
+
 Obs 6 has Euclidean Distance sqrt[(1 - 0)^2 + (1 - 0)^2 + (1 - 0)^2] = sqrt[1 + 1 + 1] = sqrt[3] = ~1.73.
 
 **(b) What is our prediction with K = 1? Why?**
