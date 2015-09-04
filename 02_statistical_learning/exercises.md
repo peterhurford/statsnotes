@@ -20,7 +20,7 @@
 
 -
 
-** 5. What are the advantages and disadvantages of a very flexible (versus a less flexible) approach for regression or classification? Under what circumstances might a more flexible approach be preferred to a less flexible approach? When might a less flexible approach be preferred?**
+**5. What are the advantages and disadvantages of a very flexible (versus a less flexible) approach for regression or classification? Under what circumstances might a more flexible approach be preferred to a less flexible approach? When might a less flexible approach be preferred?**
 
 Because of the bias-variance tradeoff, neither approach is better than the other.  A very flexible approach is great when the relationship is highly non-linear, you have a lot of data points to find a pattern from, and/or the irreducible error is low.  A very inflexible approach is great when the relationship is highly linear, you don't have many data points, and/or the irreducible error is high.
 
@@ -45,7 +45,7 @@ Obs | X1 | X2 | X3 | Y
 
 **Suppose we wish to use this data set to make a prediction for Y when X1 = X2 = X3 = 0 using K-nearest neighbors.**
 
-** (a) Compute the Euclidean distance between each observation and the test point, X1 = X2 = X3 = 0.**
+**(a) Compute the Euclidean distance between each observation and the test point, X1 = X2 = X3 = 0.**
 
 Obs 1 has Euclidean Distance sqrt[(0 - 0)^2 + (3 - 0)^2 + (0 - 0)^2] = 3.
 Obs 2 has Euclidean Distance sqrt[(2 - 0)^2 + (0 - 0)^2 + (0 - 0)^2] = 2.
