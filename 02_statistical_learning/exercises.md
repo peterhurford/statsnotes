@@ -41,7 +41,7 @@ A non-parametric approach is better at fitting highly nonlinear patterns, becaus
 
 | Obs | X1 | X2 | X3 | Y |
 |---|---|---|---|---|
-|   |   |   |   |   |
+| 1 | 0 | 3 | 0 | R |
 |   |   |   |   |   |
 |   |   |   |   |   |
 
