@@ -36,12 +36,12 @@ A non-parametric approach is better at fitting highly nonlinear patterns, becaus
 
 Obs | X1 | X2 | X3 | Y
 --- | -- | -- | -- | -
-1 | 0 | 3 | 0 | Red
-2 | 2 | 0 | 0 | Red
-3 | 0 | 1 | 3 | Red
-4 | 0 | 1 | 2 | Green
-5 | −1 | 0 | 1 | Green
-6 | 1 | 1 | 1 | Red
+1   | 0  | 3  | 0  | Red
+2   | 2  | 0  | 0  | Red
+3   | 0  | 1  | 3  | Red
+4   | 0  | 1  | 2  | Green
+5   | −1 | 0  | 1  | Green
+6   | 1  | 1  | 1  | Red
 
 **Suppose we wish to use this data set to make a prediction for Y when X1 = X2 = X3 = 0 using K-nearest neighbors.**
 
