@@ -35,7 +35,7 @@ A non-parametric approach is better at fitting highly nonlinear patterns, becaus
 **7. The table below provides a training data set containing six observations, three predictors, and one qualitative response variable.**
 
 Obs | X1 | X2 | X3 | Y
-- | - | - | - | -
+--- | -- | -- | -- | -
 1 | 0 | 3 | 0 | Red
 2 | 2 | 0 | 0 | Red
 3 | 0 | 1 | 3 | Red
