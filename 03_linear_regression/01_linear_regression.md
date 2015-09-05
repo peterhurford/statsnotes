@@ -31,10 +31,10 @@
 * *e*[*i*] = *y*[*i*] - *y*^[*i*] (estimated - actual) for each *x*[*i*] in X.  *e* is then the set of **residuals**.
 * The **residual sum of squares** (RSS) is the sum of the squared residuals.  RSS = Σ{*i*=1 -> *n*}(*e*[*i*]^2).
 
+![](../images/least-squares.png)
+
 ## Estimating β^
 
 * β^[0] = mean(*y*) - β^[1] * mean(*x*)
 * β^[1] = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*))))/(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)
 * mean(*x*) refers to the **sample mean** of *x*, or (1/n)Σ{*i*=1 -> *n*}(*x*[*i*]).
-
-![](../images/least-squares.png)
