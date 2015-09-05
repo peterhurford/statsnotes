@@ -21,3 +21,20 @@
 * Training data lets us estimate β^[0] and β^[1], and we can start predicing that *y*^ = β^[0] + β^[1] * *x*
 * *y*^ is a prediction of Y on the basis of X = *x*.
 * The `^` symbol indicates the estimated value of an unknown parameter.
+
+## Least Squares Analysis
+
+* In a linar regression, β[0] represents an intercept and β[1] represent a slope.
+* This resulting line defined by β is the line that most **closely** matches the training data.
+* There are multiple ways of measuring closeness, but the most common one is **least squares analysis**.
+* With least squares analysis, we calculate *y*^[*i*] = β^[0] + β^[1] * *x*[*i*] for each *x*[*i*] in X.
+* *e*[*i*] = *y*[*i*] - *y*^[*i*] (estimated - actual) for each *x*[*i*] in X.  *e* is then the set of **residuals**.
+* The **residual sum of squares** (RSS) is the sum of the squared residuals.  RSS = Σ{*i*=1 -> *n*}(*e*[*i*]^2).
+
+## Estimating β^
+
+* β^[0] = mean(*y*) - β^[1] * mean(*x*)
+* β^[1] = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*))))/(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)
+* mean(*x*) refers to the **sample mean** of *x*, or (1/n)Σ{*i*=1 -> *n*}(*x*[*i*]).
+
+![](../images/least-squares.png)
