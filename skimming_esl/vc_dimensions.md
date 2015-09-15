@@ -4,7 +4,7 @@
 * All sets of three points (that are not colinear) can be shattered by a linear model (i.e., a model that is just a line separating space).
 * There are sets of four points that can't be shattered by a line, but all sets of four points can be shattered by a quadratic model (e.g., parabola).
 
-![]("../images/shattering.png")
+![](../images/shattering.png)
 
 ## VC Dimensions
 
