@@ -18,7 +18,7 @@
 ![](../images/population-regression-line.png)
 
 
-## Unbiased estimation
+## Unbiased Estimation
 
 * If Y^ is **unbiased**, then **on average** Y^ = Y when aggregated across all possible observations of the population.
 * The population is the group as a whole we're seeking to make predictions for.  However, the actual makeup of the population is (frequently) unknown to us.
