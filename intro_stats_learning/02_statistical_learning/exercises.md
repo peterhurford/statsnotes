@@ -6,7 +6,7 @@
 
 **(c) The relationship between the predictors and response is highly non-linear.** Inflexible methods have a lot of trouble picking up non-linear relationships, so we should prefer a flexible method.
 
-**(d) The variance of the error terms, i.e. σ2 = Var(ε), is extremely high.** The high variance of error terms means that the sample will have a lot of noise in the relationship.  Therefore we should prefer an inflexible method that is less likely to overfit to this noise.
+**(d) The variance of the error terms, i.e. σ2 = Var(*e*), is extremely high.** The high variance of error terms means that the sample will have a lot of noise in the relationship.  Therefore we should prefer an inflexible method that is less likely to overfit to this noise.
 
 -
 
