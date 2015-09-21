@@ -3,6 +3,7 @@
 * Predicts a quantitative response.
 * Useful jumping off point for predictive methods, as many methods are extensions of linear regression.
 
+
 ## Key Questions for Analysis
 
 * Is there a relationship between X and Y?
@@ -12,6 +13,7 @@
 * How accurately can we predict future Y given future combinations of x in X?
 * Is the relationship between X and Y linear?
 * Do the x in X affect Y alone, or do particular combinations of x in X produce synergy together (called an **interaction effect**)?
+
 
 ## Simple Linear Regression
 
@@ -24,6 +26,7 @@
 * *y*^ is a prediction of Y on the basis of X = *x*.
 * The `^` symbol indicates the estimated value of an unknown parameter.
 
+
 ## Least Squares Analysis
 
 * In a linar regression, β[0] represents an intercept and β[1] represent a slope.
@@ -34,3 +37,8 @@
 * The **residual sum of squares** (RSS) is the sum of the squared residuals.  RSS = Σ{*i*=1 -> *n*}(*e*[*i*]^2).
 
 ![](../images/least-squares.png)
+
+
+## Interpreting β^
+
+* Given that Y ~= β[0]^ + β[1]^*X, we estimate that for every increase of 1 in X, we predict there will be a corresponding β[1]^ increase in Y.  Also, when X = 0, we predict Y will be β[0]^.
