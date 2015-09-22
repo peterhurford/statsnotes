@@ -2,8 +2,8 @@
 
 * Many times we have more than one variable we want to use to predict.
 * We can't simply construct multiple single regressions for each variable because each regression ignores all other variables, which is a bad assumption when the variables are correlated (which they often are).
-* Instead, we can extend Y ~= β[0] + β[1]*X to Y ~= β[0] + β[1]*X[1] + β[2]*X[2] + ... + β[*p*]*X[*p*] and we will now estimate β for all *p* variables rather than just β[0] and β[1].
-* We still will minimize RSS.  Instead of RSS = Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*])^2), RSS = Σ{*i*=1 -> *n*}((*y*[*i*] - β[0] - β[1]*X[*i*,1] - β[2]*X[*i*,2] - ... - β[1]*X[*i*,*p*])^2).
+* Instead, we can extend Y ~= β[0] + β[1]*X to Y ~= β[0] + β[1]X[1] + β[2]*X[2] + ... + β[*p*]X[*p*] and we will now estimate β for all *p* variables rather than just β[0] and β[1].
+* We still will minimize RSS.  Instead of RSS = Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*])^2), RSS = Σ{*i*=1 -> *n*}((*y*[*i*] - β[0] - β[1]X[*i*,1] - β[2]X[*i*,2] - ... - β[1]X[*i*,*p*])^2).
 
 ![](../images/regression-plane.png)
 
