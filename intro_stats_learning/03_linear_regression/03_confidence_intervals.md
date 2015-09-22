@@ -27,6 +27,6 @@
 
 * A **confidence interval** tells you the chance that the true value of A will be inside an interval ranging from A^[1] to A^[2].
 * The standard error of β^ can be used to construct confidence intervals.
-* There is a approximately a 95% chance that β[1] (the true value) will be contained in the interval [β^[1] - 2*SE(β^[1]), β^[1] + 2*SE(β^[1])].  In other words, this interval is the 95% confidence interval of β^[1].
-* The same is also true for β[0].  [β^[0] - 2*SE(β^[0]), β^[0] + 2*SE(β^[0])] is the 95% confidence interval for β[0] and, in other words, β[0] is within plus or minus two standard errors of β^[0] approximately 95% of the time.
+* There is a approximately a 95% chance that β[1] (the true value) will be contained in the interval [β^[1] - 2SE(β^[1]), β^[1] + 2SE(β^[1])].  In other words, this interval is the 95% confidence interval of β^[1].
+* The same is also true for β[0].  [β^[0] - 2SE(β^[0]), β^[0] + 2SE(β^[0])] is the 95% confidence interval for β[0] and, in other words, β[0] is within plus or minus two standard errors of β^[0] approximately 95% of the time.
 * The estimate is only approximate because of limitations of the equaltion itself, because the estimate should vary slightly from 2 based on the number of observations and because it assumes the errors are [Gaussian](https://en.wikipedia.org/wiki/Gaussian_function) (bell-curve shaped).  
