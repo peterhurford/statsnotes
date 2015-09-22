@@ -8,7 +8,7 @@
 
 * Even if we knew β (the true data) perfectly, we still could not perfectly estimate Y from X because of the accumulated error terms *e*.
 * The **residual squared error** (RSE) is an estimate of the standard deviation of *e*, or the average amount that the actual response will deviate from the perfect prediction line.
-* RSE = sqrt((1/(n-2))*RSS) = sqrt((1/(n-2)) * Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*])^2))
+* RSE = sqrt((1/(n-2))RSS) = sqrt((1/(n-2)) * Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*])^2))
 * RSE ends up being a measure of lack of fit.  Very small RSE means the model fits the data very well.  Very large RSE means the model is a poor fit for the data.
 * The downside of RSE is that it is measured relative to Y (in units of Y), so it is unclear what constitutes a good RSE and it is hard to compare different models together to assess which one is better.
 
