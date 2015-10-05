@@ -67,3 +67,14 @@ The point to the far bottom-left of this graph is both an outlier (unusual y-val
 * Instead, we can detect high-leverage points by calculating the **leverage statistic** for each point, which is *h*[*i*] = (1/*n*) + (((*x*[*i*] - mean(*x*))^2)/(Σ{j=1 -> *n*}((*x*[j]-mean(x[*j*])^2)))).  This statistic can be extended for multiple predictors.
 * *h*[*i*], the leverage statistic, clearly increases as *x*[*i*] gets further from mean(*x*).  The statistic is always between 1/*n* and 1, and the average leverage statistic is always (*p* + 1)/*n*.
 * An observation with *h*[*i*] greatly exceeeding (*p* + 1)/*n* has high leverage.
+
+
+## Dealing with Collinearity
+
+* **Collinearity** refers to when two predictor variables (IVs) correlate with each other, and it is a particular problem when they correlate with each other more strongly than they each individually correlate with the response varible (DV).
+* This is a problem because it becomes difficult to separate out the effects of each collinear variable.
+* Collinearity reduces the accuracy of the estimates of the regression coefficents, which increases the standard error for β^, which results in a decline in the t-statistic (recall how the t-statistic is calculated via the standard error for β^).  This means that collinearity results in less frequently rejecting the null hypothesis, which means colinearity reduces the **power** of the hypothesis test, or the chance of rejecting the null hypothesis correctly.
+* The easiest way to detect colinearity is to look at a correlation matrix between all the predictors.  However, the correlation matrix would fail to detect **multicollinearity**, where 3+ variables are correlated without any individual pair of variables having a high correlation.
+* Instead, we can calculate the **variance inflation factor** (VIF), which is the variance of β^[*j*] when fitted in the entire model divided by the variance of β^[*j*] when fitted alone.  The smallest possible VIF is 1, which indicates no collinearity.
+* As a rule of thumb, a VIF that exceeds 5 or 10 indiciates a problem with collinearity.
+* If collinearity is detected, the solution is to drop one of the offending variables.
