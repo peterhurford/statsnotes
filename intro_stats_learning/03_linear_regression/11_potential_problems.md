@@ -41,7 +41,7 @@ On the left, there is no relationship between the resudial and the variable, whi
 * Another solution is to use **weighted least squares**, where you multiply each term by a weight while calculating the squared error.  The weight, in this case, is (σ^2)/*n*[*i*], where *n*[*i*] is the number of raw observations in the *i*th response.  (σ^2)/*n*[*i*] comes from the assumption that the overall variance of the errors should be σ^2.
 * It's important to remember that adding this log(X) term, or taking other remedies, likely won't make your model perform better on test metrics like R^2.  Instead, it will make the calculation of R^2 more accurate.
 
-![](heteroscedasticity.png)
+![](../images/heteroscedasticity.png)
 
 
 ## Dealing with Outliers
@@ -59,7 +59,8 @@ On the left, there is no relationship between the resudial and the variable, whi
 * Outliers have an unusual y-value.  A **high-leverage point** has an unusual x-value.
 * High-leverage points tend to have very sizable influence on the regression.
 
-![](high-leverage-point.png)
+![](../images/high-leverage-point.png)
+
 The point to the far bottom-left of this graph is both an outlier (unusual y-value) and a high-leverage point (unusual x-value).  This single point turns a random data set into a data set that has a strong linear relationship.  However, this relationship is erroneous.  Detecting and removing extreme points like this is important.
 
 * While high-leverage points can be identified through residual plots, it can be quite difficult to determine them in multiple regressions with lots of variables.
