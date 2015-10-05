@@ -17,4 +17,4 @@ Six key problems:
 
 ![](../images/residual-plots.png)
 
-Text text text.
+On the left, there is no relationship between the resudial and the variable, which means the linear relationship looks correct.  However, on the right graph, there is a strong linear relationship between the residuals and the variable, which suggests the assumption of a linear relationship between the variable and the DV is not correct.
