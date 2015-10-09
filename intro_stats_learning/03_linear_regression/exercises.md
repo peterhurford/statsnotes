@@ -46,7 +46,13 @@
 -
 
 
-**6.) Using (3.4), argue that in the case of simple linear regression, the least squares line always passes through the point (mean(*x*), mean(*y*)).**
+**6.) Given that:**
+
+**β^[0] = mean(*y*) - β^[1] * mean(*x*)**
+
+**β^[1] = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*))))/(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2))**
+
+...argue that in the case of simple linear regression, the least squares line always passes through the point (mean(*x*), mean(*y*)).**
 
 -
 
