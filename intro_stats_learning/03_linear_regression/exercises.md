@@ -56,11 +56,19 @@ This is false, because the statistical significance of an interaction is differe
 
 **(a) Suppose that the true relationship between X and Y is linear, i.e. Y = β[0] + β[1]*X* + *e*. Consider the training residual sum of squares (RSS) for the linear regression, and also the training RSS for the cubic regression. Would we expect one to be lower than the other, would we expect them to be the same, or is there not enough information to tell? Justify your answer.**
 
+If the true relationship is linear, than the introduction of the cubic regression would merely introduce excess noise.  Therefore, we would expect the training RSS to be lower for the cubic regression than the linear regression.
+
 **(b) Answer (a) using test rather than training RSS.**
+
+We would also expect the test RSS to be lower for the cubic regression than the linear regression.  We expect this with even higher confidence because it's possible that the training subpopulation was skewed to be more cubic by random chance, whereas in the test population this would not necessarially be the case.
 
 **(c) Suppose that the true relationship between X and Y is not linear, but we don’t know how far it is from linear. Consider the training RSS for the linear regression, and also the training RSS for the cubic regression. Would we expect one to be lower than the other, would we expect them to be the same, or is there not enough information to tell? Justify your answer.**
 
+We don't have enough information to know.  It's possible that the cubic relationship could capture some of this non-linearity, but it depends on the nature of the relationship.
+
 **(d) Answer (c) using test rather than training RSS.**
+
+There's also not enough information to know.
 
 -
 
