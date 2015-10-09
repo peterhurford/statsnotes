@@ -106,6 +106,16 @@ There's also not enough information to know.
 
 **...argue that in the case of simple linear regression, the least squares line always passes through the point (mean(*x*), mean(*y*)).**
 
+We know that the least squares line is the line such that Y = β^[0] + β^[1] * X.
+
+When Y = mean(*y*), then
+
+Y = β^[0] + β^[1] * mean(*x*).
+= mean(*y*) - β^[1] * mean(*x*) + β^[1]
+= mean(*y*) - (β^[1] - 1) * mean(*x*)
+= mean(*y*) - ((Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*))))/(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)) - 1) * mean(*x*)
+
+
 -
 
 
