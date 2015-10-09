@@ -8,7 +8,7 @@
 -
 
 
-**3.) Suppose we have a data set with five predictors, *X*[1] = GPA, *X*[2] = IQ, *X*[3] = Gender (1 for Female and 0 for Male), *X*[4] = Interaction between GPA and IQ, and *X*[5] = Interaction between GPA and Gender. The response is starting salary after graduation (in thousands of dollars). Suppose we use least squares to fit the model, and get β^[0] = 50, β^[1] = 20 , β^[2] = 0.07, β^[3] = 35, β^[4] = 0.01, β^[5] = −10.
+**3.) Suppose we have a data set with five predictors, X[1] = GPA, X[2] = IQ, X[3] = Gender (1 for Female and 0 for Male), X[4] = Interaction between GPA and IQ, and X[5] = Interaction between GPA and Gender. The response is starting salary after graduation (in thousands of dollars). Suppose we use least squares to fit the model, and get β^[0] = 50, β^[1] = 20 , β^[2] = 0.07, β^[3] = 35, β^[4] = 0.01, β^[5] = −10.**
 
 **(a) Which answer is correct, and why?**
 **i. For a fixed value of IQ and GPA, males earn more on average than females.**
