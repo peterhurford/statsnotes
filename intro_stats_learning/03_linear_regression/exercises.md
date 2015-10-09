@@ -25,15 +25,29 @@ The KNN classifier seeks to *classify* a result into qualitative groups based on
 
 **i. For a fixed value of IQ and GPA, males earn more on average than females.**
 
+Let's reorganize the equation to Salary = 50 + 20 * GPA + 0.07 * IQ + 35 * Female + 0.01 * GPA * IQ - 10 * GPA * Female.
+
+We now can estimate that men earn an average of 50 + 20 * mean(GPA) + 0.07 * mean(IQ) + 0.01 * mean(GPA) * mean(IQ) and women earn an average of 50 + 20 * mean(GPA) + 0.07 * mean(IQ) + 35 + 0.01 * mean(GPA) * mean(IQ) - 10 * mean(GPA).  When you subtract out the common terms, you find out that women earn an average of 35 - 10 * mean(GPA) more than men.  Since we don't know the value of mean(GPA), we don't know whether men are outearning women on average or not.
+
 **ii. For a fixed value of IQ and GPA, females earn more on average than males.**
+
+Again, this is indeterminate.
 
 **iii. For a fixed value of IQ and GPA, males earn more on average than females provided that the GPA is high enough.**
 
+Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is false.
+
 **iv. For a fixed value of IQ and GPA, females earn more on average than males provided that the GPA is high enough.**
+
+Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is true.
 
 **(b) Predict the salary of a female with IQ of 110 and a GPA of 4.0.**
 
+We estimate that women earn an average of 50 + 20GPA + 0.07IQ + 35 + 0.01(GPA * IQ) - 10GPA.  Plugging in the given values yields 50 + 20 * 4 + 0.07 * 110 + 35 + 0.01 * 4 * 110 - 10 * 4, which is 137.1.  Since the unit was in 1000s of dollars, we predict a post-grad salary of $137,000.  Wow!
+
 **(c) True or false: Since the coefficient for the GPA/IQ interaction term is very small, there is very little evidence of an interaction effect. Justify your answer.**
+
+This is false, because the statistical significance of an interaction is different from the magnitude of the interaction.  It's possible to have a lot of evidence for a small (but existant!) effect.  Also, a small coefficient doesn't even mean the interaction effect is small, since it is very sensitive to the units of the two variables.
 
 -
 
