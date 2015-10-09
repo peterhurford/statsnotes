@@ -19,7 +19,7 @@
 
 **iv. For a fixed value of IQ and GPA, females earn more on average than males provided that the GPA is high enough.**
 
-** (b) Predict the salary of a female with IQ of 110 and a GPA of 4.0.**
+**(b) Predict the salary of a female with IQ of 110 and a GPA of 4.0.**
 
 **(c) True or false: Since the coefficient for the GPA/IQ interaction term is very small, there is very little evidence of an interaction effect. Justify your answer.**
 
