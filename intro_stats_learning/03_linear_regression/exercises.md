@@ -93,7 +93,7 @@ There's also not enough information to know.
 
 = Σ{*j* = 1 -> *n*}(*a*[j]*y*[*j*]) where *a*[j] = (*x*[j]^2) / (*n**x*[j]^2)
 
-= Σ{*j* = 1 -> *n*}(*a*[j]*y*[*j*]) where *a*[j] = *n*
+= Σ{*j* = 1 -> *n*}(*a*[j]*y*[*j*]) where *a*[j] = 1/*n*
 
 -
 
