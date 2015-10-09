@@ -75,6 +75,17 @@ There's also not enough information to know.
 
 **5.) Consider the fitted values that result from performing linear regression without an intercept. In this setting, the *i*th fitted value takes the form where *y*^[*i*] = *x*[*i*]β^[*i*] where β^ = (Σ{*i* = 1 -> *n*}(*x*[*i*]*y*[*i*]))/(Σ{*j* = 1 -> *n*}(*x*[*j*]^2)).  Show that we can write *y*^[*i*] = Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]).  What is *a*[*j*]?**
 
+*y*^[*i*]
+= *x*[*i*](Σ{*i* = 1 -> *n*}(*x*[*i*]*y*[*i*]))/(Σ{*j* = 1 -> *n*}(*x*[*j*]^2))
+= *x*[*i*](Σ{*i* = 1 -> *n*}((*x*[*i*]*y*[*i*])/*x*[*i*]^2))
+= *x*[*i*](Σ{*i* = 1 -> *n*}((1/*x*[*i*]^2)*x*[*i*]*y*[*i*])
+= Σ{*i* = 1 -> *n*}((1/n)*x*[*i*](1/*x*[*i*]^2)*x*[*i*]*y*[*i*])
+= Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]) where *a*[*j*] = (1/*n*)*x*[*j*](1/*x*[*j*]^2)*x*[*j*]
+= Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]) where *a*[*j*] = *x*[*j*](1/*n**x*[*j*]^2)*x*[*j*]
+= Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]) where *a*[*j*] = (1/*n**x*[*j*]^2)*x*[*j*]^2
+= Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]) where *a*[*j*] = (*x*[*j*]^2)/(*n**x*[*j*]^2)
+= Σ{*j* = 1 -> *n*}(*a*[*j*]*y*[*j*]) where *a*[*j*] = *n*
+
 -
 
 
