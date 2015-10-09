@@ -108,13 +108,15 @@ There's also not enough information to know.
 
 We know that the least squares line is the line such that Y = β^[0] + β^[1] * X.
 
-When Y = mean(*y*), then
+For (mean(*x*), mean(*y*)), X = mean(*x*) and Y = mean(*y*).  Therefore:
 
-Y = β^[0] + β^[1] * mean(*x*).
-= mean(*y*) - β^[1] * mean(*x*) + β^[1]
-= mean(*y*) - (β^[1] - 1) * mean(*x*)
-= mean(*y*) - ((Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*))))/(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)) - 1) * mean(*x*)
+mean(*y*) = β^[0] + β^[1] * mean(*x*)
 
+mean(*y*) = mean(*y*) - (β^[1] * mean(*x*)) + (β^[1] * mean(*x*))
+
+mean(*y*) = mean(*y*)
+
+Therefore, (mean(*x*), mean(*y*)) must be within the least squares line for any such mean(*x*) and mean(*y*).
 
 -
 
