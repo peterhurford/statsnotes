@@ -35,11 +35,11 @@ Again, this is indeterminate.
 
 **iii. For a fixed value of IQ and GPA, males earn more on average than females provided that the GPA is high enough.**
 
-Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is false.
+Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is true.
 
 **iv. For a fixed value of IQ and GPA, females earn more on average than males provided that the GPA is high enough.**
 
-Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is true.
+Since women are earning an average of 35 - 10 * mean(GPA) more than men, a higher GPA mean means that women earn less than men, so this is false.
 
 **(b) Predict the salary of a female with IQ of 110 and a GPA of 4.0.**
 
