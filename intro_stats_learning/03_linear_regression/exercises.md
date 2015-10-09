@@ -2,10 +2,19 @@
 
 ![](../images/table-3-4.png)
 
+
+* The null hypothesis is that no combination of TV, radio, or newspaper advertising will influence sales.  That is Sales = TV*0 + Radio*0 + Newspaper*0 + Intercept, or Y = Intercept.
+* The first p-value, that the Intercept has *p* < 0.0001, shows that TODO: ???.
+* The second p-value, that TV has *p* < 0.0001, shows that we can reject the null-hypothesis and conclude that TV has an impact on Sales, when holding Radio and Newspaper advertising constant.
+* The third p-value, that Radio has *p* < 0.0001, shows that we can reject the null-hypothesis and conclude that Radio has an impact on Sales, when holding TV and Newspaper advertising constant.
+* The fourth p-value, that Newspaper has *p* < 0.0001, shows that Newspaper does not have an impact on Sales, when holding TV and Radio advertising constant.
+
 -
 
 
 **2.) Carefully explain the differences between the KNN classifier and KNN regression methods.**
+
+The KNN classifier seeks to *classify* a result into qualitative groups based on using the most common group found among the K nearest neighbors.  The KNN regression seeks to make a quantitative estimate by averaging the result of the K nearest neighbors.
 
 -
 
