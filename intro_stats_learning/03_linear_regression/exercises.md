@@ -135,6 +135,12 @@ TSS = Σ{*i*=1 -> *n*}(*y*[*i*]^2) = *y*^2 (assuming mean(*y*) = 0)
 
 R^2 = 1 - (*y*^2 + 2*y* * 2*y*^ + (*y*^)^2)/*y*^2 (assuming mean(*y*) = 0)
 
+R^2 = 1 - (*y*^2 - (*y*^)^2)/*y*^2 (assuming mean(*y*) = 0)
+
+R^2 = (*y*^)^2 / *y*^2 (assuming mean(*y*) = 0)
+
 *r* = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*)((*y*[*i*] - mean(*y*))))))/((sqrt(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)))(sqrt(Σ{*i*=1 -> *n*}((*y*[*i*] - mean(*y*))^2))))
 
 *r* = (*x* * *y*)/sqrt((*x*^2 * *y*^2)) (assuming mean(*x*) = mean(*y*) = 0)
+
+#TODO: Finish and understand this via http://www.win-vector.com/blog/2011/11/correlation-and-r-squared/
