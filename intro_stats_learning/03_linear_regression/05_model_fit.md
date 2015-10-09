@@ -16,7 +16,7 @@
 #### R^2
 
 * The **R^2 statistic** is the poroportion of variance explained by the model.
-* R^2 = (TSS - RSS)/TSS = 1 - (TSS/RSS).  RSS is the residual sum of squares.  TSS is the **total sum of squares**, or Σ{*i*=1 -> *n*}((*y*[*i*] - mean(*y*))^2).
+* R^2 = (TSS - RSS)/TSS = 1 - (RSS/TSS).  RSS is the residual sum of squares.  TSS is the **total sum of squares**, or Σ{*i*=1 -> *n*}((*y*[*i*] - mean(*y*))^2).
 * TSS measures the total variance in Y, or the amount of varitability inherent in Y prior to any regression.  RSS measures the amount of variance left unexplained by the regression.
 * Hence, TSS - RSS measures the total amount of variability that is explained by the regression, and (TSS - RSS)/TSS makes it proportional to the total variability.
 * The R^2 statistic tries to correct the problem with RSE of being measured relative to Y by being a proportion, and thus always between 0 and 1.

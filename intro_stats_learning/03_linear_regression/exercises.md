@@ -123,20 +123,16 @@ Therefore, (mean(*x*), mean(*y*)) must be within the least squares line for any 
 
 **7.) It is claimed in the text that in the case of simple linear regression of Y onto X, the R^2 statistic is equal to the square of the correlation between X and Y. Prove that this is the case. For simplicity, you may assume that mean(*x*) = mean(*y*) = 0.**
 
-R^2 = (TSS - RSS)/TSS = 1 - (TSS/RSS)
+R^2 = (TSS - RSS)/TSS = 1 - (RSS/TSS)
 
 RSS = Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*]))^2)
+
+RSS = (*y* - *y*^)^2 = (*y* - *y*^) * (*y* - *y*^) = *y*^2 + 2(*y* * *y*^) + (*y*^)^2
 
 TSS = Σ{*i*=1 -> *n*}((*y*[*i*] - mean(*y*))^2)
 
 TSS = Σ{*i*=1 -> *n*}(*y*[*i*]^2) = *y*^2 (assuming mean(*y*) = 0)
 
-R^2 = 1 - (*y*^2 / (Σ{*i*=1 -> *n*}((*y*[*i*] - *y*^[*i*]))^2)) (assuming mean(*x*) = mean(*y*) = 0)
+R^2 = 1 - (*y*^2 + 2(*y* * *y*^) + (*y*^)^2)/*y*^2 
 
-r = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))(*y*[*i*] - mean(*y*)))) / (σ(x)σ(y))
-
-r = (Σ{*i*=1 -> *n*}((*x*[*i*])(*y*[*i*]))) / (σ(x)σ(y)) (assuming mean(*x*) = mean(*y*) = 0)
-
-r = (*x* * *y*) / σ(x)σ(y) (assuming mean(*x*) = mean(*y*) = 0)
-
-r^2 = (*x* * *y*)^2 / σ(x)σ(y) (assuming mean(*x*) = mean(*y*) = 0)
+*r* = (Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*)((*y*[*i*] - mean(*y*))))))/((sqrt(Σ{*i*=1 -> *n*}((*x*[*i*] - mean(*x*))^2)))(sqrt(Σ{*i*=1 -> *n*}((*y*[*i*] - mean(*y*))^2))))
