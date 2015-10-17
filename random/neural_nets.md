@@ -21,7 +21,8 @@
 ```Haskell
 let features = [1, 2, 3, 4]
 let weights = [1.5, 0.5, -1.5, -2.5]
-let dot weights features = foldl (+) 0 $ zipWith (*) weights features  -- Multiply each feature by each weight and then sum the entire set together.
+-- Multiply each feature by each weight and then sum the entire set together.
+let dot weights features = foldl (+) 0 $ zipWith (*) weights features
 
 dot weights features
 > -12
