@@ -29,4 +29,3 @@
 * "Will a customer default?" is represented mathematically as asking for P(default = Yes).
 * This can be modeled as asking whether the probability of default exceeds a certain threshold.  P(default = Yes) = Pr(default) > Threshold.
 * We can then model this probability given the credit history of the customer.  P(default = Yes | CreditHistory).
-
