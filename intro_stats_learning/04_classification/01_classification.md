@@ -16,8 +16,11 @@
 ## Examples of Classification Problems
 
 1.) Someone arrives at a hospital with certain symptoms.  Which disease do they have?
+
 2.) An online transaction took place with certain characteristics.  Was that transaction fraudulent?
+
 3.) A flight took off with certain characteristics.  Where is that flight headed?
+
 4.) A customer takes out a loan and has a certain credit history.  Will that customer default?
 
 
