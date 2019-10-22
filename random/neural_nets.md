@@ -89,14 +89,6 @@ relu(2)
 * For example, an 100x100 pixel image will yield 10000 variables (the value of each pixel), which could be reduced to 200 variables through one layer, reduced to 15 by a second layer, and reduced to one by a third layer.
 * There needs to be a weight for each input plus the bias at each step.  This means that in our example, there are ((10000 + 1) * 200) + ((200 + 1) * 15) + ((15 + 1) * 1) = 2,003,231 weights.
 
-#### Approximating Non-Linear Functions
-
-* Neural networks with multiple perceptrons can approximate non-linear functions as each invidiual perceptron can learn a part of the non-linear function, especially with non-linear activation functions. Furthermore, having multiple layers can allow the neural network to combine variables and learn arbitrary interaction effects.
-* For example, if we wanted to learn XOR
-
-```R
-xor <- function(x, y) as.integer(x != y)
-```
 
 ## Learning
 
@@ -117,6 +109,60 @@ xor <- function(x, y) as.integer(x != y)
 * One problem with this backpropogation technique is **overfitting**, where the weights end up too closely aligned (or **fitted**) to random fluctuations in the training data and don't sufficiently generalize to future data in the real world.
 * One solution to overfitting is **early stopping**.  The idea is that overfitting risk is the highest when the neural net is *trained too much*, so we stop the training early according to some criterion to keep the net sufficiently general.
 
+## Approximating Non-Linear Functions
+
+* Neural networks with multiple perceptrons can approximate non-linear functions as each invidiual perceptron can learn a part of the non-linear function, especially with non-linear activation functions. Furthermore, having multiple layers can allow the neural network to combine variables and learn arbitrary interaction effects.
+
+#### Initialize Network
+
+* For example, if we wanted to learn XOR:
+
+```R
+xor <- function(x, y) as.integer(x != y)
+```
+
+We might have a NN with two inputs (x and y), a hidden layer with two perceptrons, and an output.
+
+```R
+h1 <- function(x, y) relu(x * w1_1 + y * w1_2 - b1)
+h2 <- function(x, y) relu(x * w2_1 + y * w2_2 - b2)
+nn <- function(x, y) h1(x, y) * w3_1 + h2(x, y) * w3_2 - b3
+# Learn weights w1_1, w1_2, w2_1, w2_2, w3_1, w3_2 and biases b1, b2, b3 such that nn(0, 0) == 0 and n(1, 0) == 1 and n(1, 1) == 0 and n(0, 1) == 1.
+```
+
+This would not be possible with a linear regression, but it is possible with a two perceptron one-layer neural network. We start with all values as 0.
+
+```R
+w1_1 <- 0; w1_2 <- 0; b1 <- 0; w2_1 <- 0; w2_2 <- 0; b2 <- 0; w3_1 <- 0; w3_2 <- 0; b3 <- 0
+h1 <- function(x, y) relu(x * w1_1 + y * w1_2 - b1)
+h2 <- function(x, y) relu(x * w2_1 + y * w2_2 - b2)
+nn <- function(x, y) relu(h1(x, y) * w3_1 + h2(x, y) * w3_2 - b3)
+nn(0, 0)
+> 0
+nn(0, 1)
+> 0
+nn(1, 0)
+> 0
+nn(1, 1)
+> 0
+```
+
+Ok, all the results are 0, which gets two results correct but two wrong. The incorrect results will backpropogate the network, updating w3_2 and b3 first and then updating the others. This involves some advanced calculus that I don't understand, but after enough rounds we will eventually get workable weights and biases where the `nn` approximates `xor` perfectly.
+
+```R
+w1_1 <- 1; w1_2 <- 1; b1 <- 1; w2_1 <- -1; w2_2 <- -1; b2 <- -1; w3_1 <- 1; w3_2 <- 1; b3 <- 0
+h1 <- function(x, y) relu(x * w1_1 + y * w1_2 - b1)
+h2 <- function(x, y) relu(x * w2_1 + y * w2_2 - b2)
+nn <- function(x, y) relu(h1(x, y) * w3_1 + h2(x, y) * w3_2 - b3)
+nn(0, 0)
+> 1
+nn(0, 1)
+> 0
+nn(1, 0)
+> 0
+nn(1, 1)
+> 1
+```
 
 ## Recurrent Neural Nets vs. Feedforward Neural Nets
 
