@@ -18,59 +18,85 @@
 
 * A **dot product** is an aggregate value derived from two different vectors, such as by taking the sum of the product of the features and the weights.  Here is an example in Haskell:
 
-```Haskell
-let features = [1, 2, 3, 4]
-let weights = [1.5, 0.5, -1.5, -2.5]
--- Multiply each feature by each weight and then sum the entire set together.
-let dot weights features = foldl (+) 0 $ zipWith (*) weights features
+```R
+features <- c(1, 2, 3, 4)
+weights <- c(1.5, 0.5, -1.5, -2.5)
+# Multiply each feature by each weight and then sum the entire set together.
+dot <- function(weights, features) sum(weights * features)
 
-dot weights features
+dot(weights, features)
 > -12
 ```
 
 
-## Transform Function
+## Activation Function
 
-After we have the dot product of the features and the weights, we pass the product into a transform function.
+After we have the dot product of the features and the weights, we pass the product into a transform function, called an **activation function**.
 
 #### Bias
 
-The bias is an important parameter in neural networks, as it allows you to control the overall output of the neural network by moving the entire set of predictions up or down.  It focuses analagous to the intercept in a linear model.
+The bias is an important parameter in neural networks, as it allows you to control the overall output of the neural network by moving the entire set of predictions up or down.  It is analagous to the intercept in a linear model.
 
-```Haskell
-let bias = 1
+```R
+bias <- 1
 ```
 
 #### Predicting Binary Output
 
-For predicting binary output with a given set of features, a given set of weights, and the bias, a binary transform function is used, where the result is 1 if the dot product of the weights and the features plus the bias is greater than 0, and 0 otherwise.
+For predicting binary output with a given set of features, a given set of weights, and the bias, a binary activation function is used, where the result is 1 if the dot product of the weights and the features plus the bias is greater than 0, and 0 otherwise.
 
-```Haskell
-let binary_transform x bias = if x + bias > 0 then 1 else 0
-
-binary_transform (weights `dot` features) bias
+```R
+binary_transform <- function(x, bias) if ((x + bias) > 0) 1 else 0
+binary_transform(dot(weights, features), bias)
 > 0
 ```
 
 #### Predicting Continuous Output
 
-We also can predict a continuous output by using a different transform function relying on a logistic transformation.  Here, we incorporate the bias by prepending it to the feature list.
+We also can predict a continuous output by using a different activation function relying on a logistic (sigmoid) transformation.  Here, we incorporate the bias by prepending it to the feature list.
 
 ```Haskell
-let continuous_transform x = 1 / (1 + exp (-x))
+sigmoid <- function(x) 1 / (1 + exp (-x))
 
-continuous_transform (weights `dot` (bias:features))
-> 2.0342697805520653e-4
+sigmoid(dot(c(0, weights), c(bias, features)))
+> 6.144175e-06
 ```
 
+#### ReLU
+
+Another common activation function is **ReLU** (Rectified Linear Unit), which is 0 if the input is negative or the input otherwise:
+
+```R
+relu <- function(x) max(0, x)
+
+relu(-2)
+> 0
+relu(-1)
+> 0
+relu(0)
+> 0
+relu(1)
+> 1
+relu(2)
+> 2
+```
 
 ## The Neural Network
 
-* The **neural network** is a composition of **layers**, each of which are a composition of **perceptrons**.  "Perceptron" is a fancy word for those transformation functions we talked about earlier.
-* Each layer takes a large amount of inputs and reduces it to a smaller number of inputs through these transformation functions, until we ultimately have a single prediction.
+* The **neural network** is a composition of **layers**, each of which are a composition of **perceptrons**.  "Perceptron" is a fancy word for those activation functions we talked about earlier.
+* Each layer takes a large amount of inputs and reduces it to a smaller number of inputs through these activation functions, until we ultimately have a single (or, in some cases, multiple) output prediction(s).
+* For fully-connected layers, every perceptron is connected to every other perceptron. Each connection involves a trainable weight and each perceptron involves a trainable bias.
 * For example, an 100x100 pixel image will yield 10000 variables (the value of each pixel), which could be reduced to 200 variables through one layer, reduced to 15 by a second layer, and reduced to one by a third layer.
 * There needs to be a weight for each input plus the bias at each step.  This means that in our example, there are ((10000 + 1) * 200) + ((200 + 1) * 15) + ((15 + 1) * 1) = 2,003,231 weights.
 
+#### Approximating Non-Linear Functions
+
+* Neural networks with multiple perceptrons can approximate non-linear functions as each invidiual perceptron can learn a part of the non-linear function, especially with non-linear activation functions. Furthermore, having multiple layers can allow the neural network to combine variables and learn arbitrary interaction effects.
+* For example, if we wanted to learn XOR
+
+```R
+xor <- function(x, y) as.integer(x != y)
+```
 
 ## Learning
 
