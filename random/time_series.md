@@ -1,4 +1,4 @@
-## Time Series
+# Time Series
 
 **Time series** problems are problems that involve forecasting (extrapolating) the future based on the information of the past. Typically we have to make a chain of non-independent predictions rather than predict discrete, indepdenent events.
 
@@ -7,7 +7,7 @@ Most machine learning problems assume that the order of rows don't matter and th
 Another key assumption of ML is that the training data is similar to the data being predicted (in this case, future data). This assumption must be true for time series as well.
 
 
-## Decomposition
+# Decomposition
 
 You can **decompose** a time series into four key parts:
 
@@ -16,24 +16,24 @@ You can **decompose** a time series into four key parts:
 - A non-seasonal **cyclical** (C) component (e.g., stock market follows "business cycles"). This is distinct from seasonality as seasonality has a fixed period (e.g., every November), whereas cycle does not.
 - A **random** component (e)
 
-#### Types of decomposition
+## Types of decomposition
 
 There are two types of decomposition -- **addititive**, where `y = T + S + C + e` and **multiplicative**, where `y = T * S * C * e`.
 
-## Stationary vs. non-stationarity
+# Stationary vs. non-stationarity
 
 **Stationary** time series (a) do not have a trend and also (b) do not have variance that changes over time. **Non-stationary** trends do have (a) and/or (b). Typically (a) and (b) create problems for modeling, as models have trouble extrapolating these and they tend to violate the assumption that the training data is similar to the data being predicted.
 
-#### Converting to stationary
+## Converting to stationary
 
 We can resolve these issues by converting a non-stationary series to a stationary series. This is done by **differencing**, where we look at the differences in the target over time rather than the actual target (y[t]-> y[t] - y[t-1]).
 
 We can also handle exponential trends using techniques like log transformations.
 
 
-## Handling Features
+# Handling Features
 
-#### Lags
+## Lags
 
 Lagging is pretty key to time series. A **lag** is when you use the value from the previous series to forecast the next series. You can lag the target variable (e.g., use last month's sales to predict next month's sales) and/or you can lag independent variables. Lagging works because the real world has delays (e.g., it takes a few weeks for marketing to transition to sales so marketing spend from three weeks ago may be more predictive than marketing spend of the same week) and causations over time (e.g., sales from last year show that the store is more popular so there is more word of mouth and it is even more popular the next year).
 
@@ -41,11 +41,11 @@ Lagging risks losing some data, as if you are using data from the previous month
 
 We can mix lags of different lengths.
 
-#### Rolling Statistics
+## Rolling Statistics
 
 Lags aren't the only thing we can do - we can also calculate **rolling statistics**, like the mean of a variable over the past 14 days. You can also do rolling stats on differences.
 
-#### Which Lags / Rolling Stats to Use?
+## Which Lags / Rolling Stats to Use?
 
 - Assess with **cross correlation function**, which tests correlation of many different lags.
 
@@ -55,7 +55,7 @@ Lags aren't the only thing we can do - we can also calculate **rolling statistic
 
 - compare by backtesting
 
-#### Known in Advance vs. Not
+## Known in Advance vs. Not
 
 When we are trying to predict in the future, we run into an issue that the features we are using for prediction might also be unknown at prediction time. For example, our historical data might contain information about rainfall and how that connects to sales, but we can't reliably know the rainfall three months in the future to predict future sales.
 
@@ -64,7 +64,7 @@ However, some features are known in advance - like Christmas time may also have 
 For features that are not known in advance, we can still use them by either explicitly forecasting them, extrapolating them out using lags / rolling stats of sufficient size, or extrapolating from current values using differing forecast differences.
 
 
-## Validation
+# Validation
 
 Normally for ML problems we use cross validation, where we randomly partition the data and then predict one partition using data from all the other partitions. The problem with this for time series is that this will involve using future data to predict the past, which will make for unrealistically good predictions.
 
@@ -73,16 +73,18 @@ Instead, we ca use **backtesting** where we predict a future time using a window
 For metrics, it's good to compare the evaluation metric to a **naive baseline model**, or an intentionally minimal extrapolation.
 
 
-## Types of Models
+# Types of Models
 
 - **Integrated model** - move model one step at a time, e.g., ARIMA, exponential smoothing - univariate
 - **Forecast distance model** - predict fixed distances, e.g., XGB
 - **Trend and decomposition model** - predict a different model for each distance, e.g., FB Prophet
 
-#### ARIMA
+## ARIMA
 
 **Autoregressive process**: AR(p): fit coefficients to p lags
+
 **Moving average process**: MA(q): fit coefficients to q previous errors
+
 **ARMA model**: X = f(AR, MA)
 
 **I(d)** = Differencing d times
@@ -90,6 +92,6 @@ For metrics, it's good to compare the evaluation metric to a **naive baseline mo
 **ARIMA(p, d, q)** = AR(p) + I(d) + MA(q)
 
 
-## Multiseries
+# Multiseries
 
 Predict a different time series for each unit (e.g., sales by store). Can use features across series (**cross series features**).
