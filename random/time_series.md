@@ -7,7 +7,7 @@ Most machine learning problems assume that the order of rows don't matter and th
 Another key assumption of ML is that the training data is similar to the data being predicted (in this case, future data). This assumption must be true for time series as well.
 
 
-# Decomposition
+## Decomposition
 
 You can **decompose** a time series into four key parts:
 
@@ -20,7 +20,8 @@ You can **decompose** a time series into four key parts:
 
 There are two types of decomposition -- **addititive**, where `y = T + S + C + e` and **multiplicative**, where `y = T * S * C * e`.
 
-# Stationary vs. non-stationarity
+
+## Stationary vs. non-stationarity
 
 **Stationary** time series (a) do not have a trend and also (b) do not have variance that changes over time. **Non-stationary** trends do have (a) and/or (b). Typically (a) and (b) create problems for modeling, as models have trouble extrapolating these and they tend to violate the assumption that the training data is similar to the data being predicted.
 
@@ -31,7 +32,7 @@ We can resolve these issues by converting a non-stationary series to a stationar
 We can also handle exponential trends using techniques like log transformations.
 
 
-# Handling Features
+## Handling Features
 
 ### Lags
 
@@ -64,7 +65,7 @@ However, some features are known in advance - like Christmas time may also have 
 For features that are not known in advance, we can still use them by either explicitly forecasting them, extrapolating them out using lags / rolling stats of sufficient size, or extrapolating from current values using differing forecast differences.
 
 
-# Validation
+## Validation
 
 Normally for ML problems we use cross validation, where we randomly partition the data and then predict one partition using data from all the other partitions. The problem with this for time series is that this will involve using future data to predict the past, which will make for unrealistically good predictions.
 
@@ -73,7 +74,7 @@ Instead, we ca use **backtesting** where we predict a future time using a window
 For metrics, it's good to compare the evaluation metric to a **naive baseline model**, or an intentionally minimal extrapolation.
 
 
-# Types of Models
+## Types of Models
 
 - **Integrated model** - move model one step at a time, e.g., ARIMA, exponential smoothing - univariate
 - **Forecast distance model** - predict fixed distances, e.g., XGB
@@ -92,6 +93,6 @@ For metrics, it's good to compare the evaluation metric to a **naive baseline mo
 **ARIMA(p, d, q)** = AR(p) + I(d) + MA(q)
 
 
-# Multiseries
+## Multiseries
 
 Predict a different time series for each unit (e.g., sales by store). Can use features across series (**cross series features**).
