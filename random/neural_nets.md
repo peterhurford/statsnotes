@@ -16,7 +16,7 @@
 
 ## Dot Product
 
-* A **dot product** is an aggregate value derived from two different vectors, such as by taking the sum of the product of the features and the weights.  Here is an example in Haskell:
+* A **dot product** is an aggregate value derived from two different vectors, such as by taking the sum of the product of the features and the weights.  Here is an example in R:
 
 ```R
 features <- c(1, 2, 3, 4)
@@ -55,7 +55,7 @@ binary_transform(dot(weights, features), bias)
 
 We also can predict a continuous output by using a different activation function relying on a logistic (sigmoid) transformation.  Here, we incorporate the bias by prepending it to the feature list.
 
-```Haskell
+```R
 sigmoid <- function(x) 1 / (1 + exp (-x))
 
 sigmoid(dot(c(0, weights), c(bias, features)))
